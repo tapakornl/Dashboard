@@ -14,7 +14,7 @@ function useToken() {
 
   const [token, setToken] = useState(getToken());
 
-  const saveToken = (userToken) => {
+  const saveToken = (userToken: any) => {
     sessionStorage.setItem('token', JSON.stringify(userToken));
     setToken(userToken.token);
   };
@@ -25,7 +25,7 @@ function useToken() {
   };
 }
 
-async function loginUser(username, password) {
+async function loginUser(username: string, password: string) {
   const requestOptions: any = {
     url: API_CONSTANTS.LOGIN_URL,
     method: 'POST',

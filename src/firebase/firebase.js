@@ -14,7 +14,6 @@ const config = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MESUREMENT_ID,
 };
-console.log(config)
 
 const FirebaseProvider = ({ children }) => {
   let firebase = {

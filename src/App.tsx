@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
+import { prepareAxios } from './services/prepareAxios';
 import logo from './assets/common/logo/logo.png';
 
 function App() {
+  useEffect(() => {
+    prepareAxios()
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
