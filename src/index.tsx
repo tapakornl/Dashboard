@@ -2,12 +2,18 @@ import ReactDOM from 'react-dom';
 import { Provider } from "jotai";
 import { GlobalStyle } from "./GlobalStyle/GlobalStyle";
 import { FirebaseProvider } from './firebase';
-import App from './App';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import AdminLayout from 'layouts/AdminLayout';
 
 ReactDOM.render(
   <Provider>
     <FirebaseProvider>
-      <App />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+          <Redirect from="*" to="/admin/dashboard" />
+        </Switch>
+      </BrowserRouter>
       <GlobalStyle />
     </FirebaseProvider>
   </Provider>,
