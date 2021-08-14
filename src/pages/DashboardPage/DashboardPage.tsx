@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { SummarySection } from './components/SummarySection'
-import { PortfolioSection } from './components/PortfolioSection'
 
 const Container = styled.div`
     width: 100%;
@@ -15,9 +14,6 @@ const DashboardPage = (props: any) => {
                 <SummarySection>
 
                 </SummarySection>
-                <PortfolioSection>
-
-                </PortfolioSection>
             </Container>
         </>
     )

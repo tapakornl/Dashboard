@@ -1,6 +1,5 @@
 import React from "react";
 import { Portfolio } from './Portfolio'
-import { PortfolioExposure } from './PortfolioExposure'
 
 export const PortfolioSection = (props: any) => {
   return (
@@ -8,9 +7,7 @@ export const PortfolioSection = (props: any) => {
       <Portfolio>
 
       </Portfolio>
-      <PortfolioExposure>
 
-      </PortfolioExposure>
     </div>
   )
 }
