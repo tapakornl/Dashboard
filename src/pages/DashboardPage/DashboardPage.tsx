@@ -1,5 +1,7 @@
+import { PortfolioSection } from './components/PortfolioSection'
 import styled from 'styled-components'
 import { SummarySection } from './components/SummarySection'
+import { Row } from 'antd';
 
 const Container = styled.div`
     width: 100%;
@@ -10,11 +12,15 @@ const Container = styled.div`
 const DashboardPage = (props: any) => {
     return (
         <>
-            <Container>
-                <SummarySection>
+        <Row gutter={[16, 8]}>
 
-                </SummarySection>
+
+            <Container>
+                <SummarySection  /> 
+                <PortfolioSection />
             </Container>
+            </Row>
+
         </>
     )
 }

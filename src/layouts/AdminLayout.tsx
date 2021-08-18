@@ -40,9 +40,9 @@ const AdminLayout = (props: any) => {
     });
   };
 
-  if (!token) {
-    window.location.href = "/login"
-  }
+  // if (!token) {
+  //   window.location.href = "/login"
+  // }
 
   return (
     <>
