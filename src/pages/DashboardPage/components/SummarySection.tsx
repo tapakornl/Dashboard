@@ -1,16 +1,18 @@
 import React from "react";
 import { NetWorth } from './NetWorth'
 import { DailyIncome } from './DailyIncome'
-
+import { Row, Col } from 'antd'
 export const SummarySection = (props: any) => {
   return (
-    <div style={{background: 'tomato', width:'100%', height:'300px', padding:'20px'}}>
-      <NetWorth>
-
-      </NetWorth>
-      <DailyIncome>
-
-      </DailyIncome>
-    </div>
+    <Row gutter={[16, 8]}>
+      <Col span={12} >
+        <NetWorth>
+        </NetWorth>
+      </Col>
+      <Col span={12} >
+        <DailyIncome>
+        </DailyIncome>
+      </Col>
+    </Row>
   )
 }

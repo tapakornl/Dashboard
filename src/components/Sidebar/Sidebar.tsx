@@ -15,8 +15,11 @@ const Sidebar = (props: any) => {
   return (
     <>
       <NavContainer>
+        <SimpleBar style={{ maxHeight: 300, padding: "15px" }}>
+        Home
+        </SimpleBar>
         <SimpleBar style={{ maxHeight: 300 }}>
-
+        Portfolio
         </SimpleBar>
       </NavContainer>
     </>
