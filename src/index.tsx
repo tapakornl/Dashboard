@@ -4,6 +4,7 @@ import { GlobalStyle } from "./GlobalStyle/GlobalStyle";
 import { FirebaseProvider } from './firebase';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import AdminLayout from 'layouts/AdminLayout';
+import 'antd/dist/antd.css'
 
 ReactDOM.render(
   <Provider>
