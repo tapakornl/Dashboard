@@ -15,6 +15,7 @@ const Container = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.055);
   color: #397CDD;
   font-weight: 600;
+  z-index: 1;
 `
 
 const Block = styled.div`

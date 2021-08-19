@@ -7,9 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Noto Sans JP", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    @media only screen and (max-width: 992px) {
-      height: calc(100% + 72px);
-    }
+    height: 100vh;
   }
 
   button {

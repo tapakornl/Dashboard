@@ -7,6 +7,7 @@ const Container = styled.div`
     width: 100%;
     height: fit-content;
     padding: 15px;
+    top: 40;
 `
 
 const DashboardPage = (props: any) => {
