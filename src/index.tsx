@@ -8,7 +8,6 @@ import 'antd/dist/antd.css'
 
 ReactDOM.render(
   <Provider>
-    <FirebaseProvider>
       <BrowserRouter>
         <Switch>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
@@ -16,7 +15,6 @@ ReactDOM.render(
         </Switch>
       </BrowserRouter>
       <GlobalStyle />
-    </FirebaseProvider>
   </Provider>,
   document.getElementById('root')
 );

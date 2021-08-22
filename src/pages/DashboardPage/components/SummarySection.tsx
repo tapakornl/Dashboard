@@ -6,7 +6,7 @@ export const SummarySection = (props: any) => {
   return (
     <Row gutter={[16, 8]}>
       <Col span={12} >
-        <NetWorth>
+        <NetWorth class="header-child">
         </NetWorth>
       </Col>
       <Col span={12} >

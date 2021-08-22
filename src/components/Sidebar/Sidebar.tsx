@@ -9,7 +9,7 @@ const NavContainer = styled.div`
   flex-direction: column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-top: 40px;
-  top:40;
+  top: 67px;
   position: sticky;
 `
 
