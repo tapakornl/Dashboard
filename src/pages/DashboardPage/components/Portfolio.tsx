@@ -1,5 +1,7 @@
 import { Row } from "antd";
 import { TokenValues } from "types/TokenValue";
+import {TokenTable} from "./TokenTable";
+import React from 'react'
 
 type token = {
   name: string;
@@ -17,13 +19,15 @@ export const Portfolio = ({ tokenValues }: TokenValues) => {
       </div>
     </>
   ));
-
+  
   return (
     <div>
       <Row gutter={[16, 8]}>
         <h2 style={{ float: "left" }}>Your Porfolio</h2>
       </Row>
-      <Row> {toktok}</Row>
+      <Row> 
+        <TokenTable tokenDescriptions={tokenValues} />
+      </Row>
     </div>
   );
 };
