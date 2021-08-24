@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Notification from 'components/Notification'
 import Profile from 'components/Profile'
-import Logo from 'assets/common/logo/logo.svg'
 
 const Container = styled.div`
   position:sticky;
@@ -10,7 +9,7 @@ const Container = styled.div`
   height: 67px;
   display:flex;
   justify-content:space-between;
-  padding: 8px 16px 8px 80px;
+  padding: 8px 16px 8px 16px;
   align-items:center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.055);
   color: #397CDD;
@@ -53,17 +52,12 @@ const Navbar = ({ pageName }: NavbarProps) => {
   return (
     <>
       <Container>
-        <IconContainer>
-          <IconImage src={Logo} />
-        </IconContainer>
         <Block>
           <PageName>
             {pageName}
           </PageName>
         </Block>
         <Block>
-          <Notification />
-          <Profile />
         </Block>
       </Container>
     </>

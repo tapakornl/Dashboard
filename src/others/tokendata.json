@@ -1,5 +1,23 @@
 [
   {
+    "address": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "symbol": "bnb",
+    "logo": "https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png?1547034615",
+    "decimals": 18,
+    "chain": "BSC",
+    "name": "Binance Coin",
+    "extensions": {
+      "coingeckoId": "binancecoin"
+    },
+    "price": 421.81,
+    "source": "COINGECKO",
+    "isBlacklisted": false,
+    "reportCount": 31,
+    "createdAt": "2021-06-25T19:07:42.576Z",
+    "modifiedAt": "2021-08-19T15:11:59.000Z",
+    "balance": 1.8022397241477197
+  },
+  {
     "address": "0x084bb94e93891d74579b54ab63ed24c4ef9cd5ef",
     "symbol": "COUPON",
     "logo": "https://foodcourt.finance/images/coupon.svg",

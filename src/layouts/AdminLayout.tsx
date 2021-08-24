@@ -10,7 +10,7 @@ const Container = styled.div`
   min-height: 100%;
   display:flex;
   flex-direction:column;
-  background-color: #F8F8F8;
+  background-color: #FAFAFA;
 `
 
 const Main = styled.main`

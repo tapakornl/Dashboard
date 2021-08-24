@@ -18,7 +18,7 @@ const Sidebar = (props: any) => {
     <>
       <NavContainer>
         <SimpleBar style={{ maxHeight: 300, padding: "15px" }}>
-        Home
+        Home 
         </SimpleBar>
         <SimpleBar style={{ maxHeight: 300 }}>
         Portfolio

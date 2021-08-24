@@ -1,7 +1,9 @@
-import { Row } from "antd";
+import { Col, Row } from "antd";
 import { TokenValues } from "types/TokenValue";
-import {TokenTable} from "./TokenTable";
+import { Table } from 'antd';
 import React from 'react'
+import { useEffect } from "react";
+import { Console } from "console";
 
 type token = {
   name: string;
@@ -11,22 +13,53 @@ type token = {
   // value: number,
   // chain: string
 };
-export const Portfolio = ({ tokenValues }: TokenValues) => {
+
+const columns = [
+  {
+    title: 'Assets',
+    dataIndex: 'symbol',
+    key: 'symbol',
+  },
+  {
+    title: 'Balances',
+    dataIndex: 'balance',
+    key: 'balance',
+  }
+  // {
+  //   title: 'Price',
+  //   dataIndex: 'price',
+  //   key: 'price',
+  // },
+  // {
+  //   title: 'Value',
+  //   dataIndex: 'value',
+  //   key: 'value',
+  // }
+];
+
+
+export const Portfolio = ({ tokenValues, loading }: TokenValues) => {
   var toktok = tokenValues.map((tokenValue) => (
-    <>
-      <div key={tokenValue.name}>
-        tokens: {tokenValue.name}, balance: {tokenValue.balance}
-      </div>
-    </>
+    {
+      symbol: tokenValue.symbol,
+      // price: tokenValue.price,
+      balance: tokenValue.balance.toFixed(2),
+      // value: tokenValue.price * tokenValue.balance < 0.005 ? 0 : (tokenValue.price * tokenValue.balance).toFixed(2) 
+    }
   ));
-  
+
+  toktok.sort((a,b) => a.balance < b.balance ? 1 : -1)
+
+  console.log(toktok);
   return (
     <div>
       <Row gutter={[16, 8]}>
         <h2 style={{ float: "left" }}>Your Porfolio</h2>
       </Row>
-      <Row> 
-        <TokenTable tokenDescriptions={tokenValues} />
+      <Row>
+        <Col span={24}>
+          <Table dataSource={toktok} columns={columns} loading={loading} pagination={{ pageSize: 25 }} />
+        </Col>
       </Row>
     </div>
   );
