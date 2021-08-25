@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { AiOutlinePieChart } from "react-icons/ai";
 const NavContainer = styled.div`
   width: 300px;
-  height: calc(100vh - 67px);
+  height: calc(1500px - 67px);
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
