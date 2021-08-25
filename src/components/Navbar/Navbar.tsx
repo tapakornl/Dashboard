@@ -15,6 +15,7 @@ const Container = styled.div`
   color: #397CDD;
   font-weight: 600;
   z-index: 1;
+  background-color: #FAFAFA;
 `
 
 const Block = styled.div`
@@ -27,7 +28,7 @@ const Block = styled.div`
 
 const PageName = styled.p`
   font-size: 24px;
-  margin:0px;
+  margin:48px;
 `
 
 const IconContainer = styled.div`
