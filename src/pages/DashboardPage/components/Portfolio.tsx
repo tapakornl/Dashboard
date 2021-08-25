@@ -70,7 +70,7 @@ export const Portfolio = ({ tokenValues, loading }: TokenValues) => {
 
   console.log(toktok);
   return (
-    <Container>
+    // <Container>
       <div style={{ padding: "15px" }}>
         {/* <Row gutter={[16, 8]}>
       </Row> */}
@@ -86,6 +86,6 @@ export const Portfolio = ({ tokenValues, loading }: TokenValues) => {
           </Col>
         </Row>
       </div>
-    </Container>
+    /* </Container> */
   );
 };
