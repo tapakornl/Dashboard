@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   min-height: 400px;
-  border: 2px solid rgba(200, 200, 200,1);
+  border: 2px solid rgba(240, 240, 240,1);
   display:flex;
   flex-direction:column;
   background-color: #FFFFFF;
@@ -14,19 +14,18 @@ const Container = styled.div`
   border-radius: 12px;
 `
 
-export const SummarySection = (props: any) => {
+export const SummarySection = ({netWorth}:any) => {
   return (
-    <Container>
+    // <Container>
       <Row gutter={[16, 8]}>
         <Col span={12} >
-          <NetWorth class="header-child">
-          </NetWorth>
+          <NetWorth class="header-child" netWorth={netWorth} />
         </Col>
         <Col span={12} >
           <DailyIncome>
           </DailyIncome>
         </Col>
       </Row>
-    </Container>
+    // </Container>
   )
 }
