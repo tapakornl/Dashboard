@@ -65,8 +65,8 @@ const DashboardPage = (props: any) => {
             setInput('');
             // console.log(contract);
             console.log('onkey wllet', event.target.value);
-            let tokens = await getTokenBalance(provider,event.target.value) ;
-            console.log(tokens);
+            let tokens: any = await getTokenBalance(provider,event.target.value) ;
+            console.log('tokens', tokens);
             setTokenValues(tokens);
             setLoading(false);
             // console.log(ethers.utils.formatUnits(await (contract.balanceOf('0x81bfcc1e6f31023b80B8242C7C1395610A295EF0', { blockTag: 1500000 }))));

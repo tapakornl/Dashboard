@@ -5,7 +5,7 @@ type TokenValueBase = {
   // decimals: number,
   chain: string,
   // name: string,
-  // price: number,
+  price: number,
   balance: number
 }
 

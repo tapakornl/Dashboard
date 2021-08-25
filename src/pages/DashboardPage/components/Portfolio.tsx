@@ -8,9 +8,9 @@ import { Console } from "console";
 type token = {
   name: string;
   balance: number;
-  // price: number,
+  price: number,
   // yesterdayPrice: number,
-  // value: number,
+  value: number,
   // chain: string
 };
 
@@ -21,20 +21,27 @@ const columns = [
     key: 'symbol',
   },
   {
+    title: 'Chain',
+    dataIndex: 'chain',
+    key: 'chain',
+  },
+  {
     title: 'Balances',
     dataIndex: 'balance',
     key: 'balance',
+  },
+  {
+    title: 'Price',
+    dataIndex: 'price',
+    key: 'price',
+    
+  },
+  {
+    title: 'Value',
+    dataIndex: 'value',
+    key: 'value',
+    sorter: (a:any, b:any) => a.value - b.value,
   }
-  // {
-  //   title: 'Price',
-  //   dataIndex: 'price',
-  //   key: 'price',
-  // },
-  // {
-  //   title: 'Value',
-  //   dataIndex: 'value',
-  //   key: 'value',
-  // }
 ];
 
 
@@ -42,9 +49,10 @@ export const Portfolio = ({ tokenValues, loading }: TokenValues) => {
   var toktok = tokenValues.map((tokenValue) => (
     {
       symbol: tokenValue.symbol,
-      // price: tokenValue.price,
+      chain: tokenValue.chain,
+      price: tokenValue.price,
       balance: tokenValue.balance.toFixed(2),
-      // value: tokenValue.price * tokenValue.balance < 0.005 ? 0 : (tokenValue.price * tokenValue.balance).toFixed(2) 
+      value: tokenValue.price * tokenValue.balance < 0.005 ? 0 : (tokenValue.price * tokenValue.balance).toFixed(2) 
     }
   ));
 
@@ -58,7 +66,7 @@ export const Portfolio = ({ tokenValues, loading }: TokenValues) => {
       </Row>
       <Row>
         <Col span={24}>
-          <Table dataSource={toktok} columns={columns} loading={loading} pagination={{ pageSize: 25 }} />
+          <Table dataSource={toktok} columns={columns} loading={loading} pagination={{ pageSize: 30 }} />
         </Col>
       </Row>
     </div>
