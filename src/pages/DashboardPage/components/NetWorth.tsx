@@ -29,7 +29,7 @@ export const NetWorth = ({ netWorth }: any) => {
         </Row>
         <Row gutter={[16, 8]} style={{height:'100%'}}>
           <Col span={24} style={{display: "flex", justifyContent: "center", height: '300px', alignItems:"center"}}>
-            <p style={{fontSize:"48px"}}>{netWorth.toFixed(2)}</p>
+            <p style={{fontSize:"48px"}}>$ {netWorth.toFixed(2)}</p>
           </Col>
         </Row>
       </Container>
